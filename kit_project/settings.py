@@ -27,12 +27,11 @@ TIME_ZONE = "Africa/Kampala"
 # you should configure your database here before doing any real work.
 # see: http://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': {
-        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kit',
-        'USER': 'postgres',
-        'HOST': 'dbserver',
-    }
+
+   'default': {
+        'ENGINE' : 'django.db.backends.sqlite3',
+        'NAME'   : 'kit_sql',
+       }
 }
 # the rapidsms backend configuration is designed to resemble django's
 # database configuration, as a nested dict of (name, configuration).
@@ -91,7 +90,7 @@ INSTALLED_APPS = [
     "generic.reporting",
     "uganda_common",
     "script",
-
+   # "south",
 ]
 
 
@@ -105,6 +104,7 @@ SMS_APPS = [
 # to add it here, also, to expose it in the rapidsms ui.
 RAPIDSMS_TABS = [
     ('kit.views.edit_config', "Configuration"),
+     ("httprouter-console", "Console"),
 ]
 
 # -------------------------------------------------------------------- #
@@ -116,7 +116,6 @@ RAPIDSMS_TABS = [
 # development at the moment, and full stack traces are very useful
 # when reporting bugs. don't forget to turn this off in production.
 DEBUG = TEMPLATE_DEBUG = True
-
 
 # after login (which is handled by django.contrib.auth), redirect to the
 # dashboard rather than 'accounts/profile' (the default).
@@ -186,6 +185,13 @@ TEMPLATE_LOADERS = (
 
 # the project-level url patterns
 ROOT_URLCONF = "urls"
+
+#logging stuff
+LOG_LEVEL = "DEBUG"
+LOG_FILE = "rapidsms.log"
+LOG_FORMAT = "[%(name)s]: %(message)s"
+LOG_SIZE = 8192 # 8192 bits = 8 kb
+LOG_BACKUPS = 256 # number of logs to keep
 
 import os
 import tempfile

@@ -1,0 +1,43 @@
+[django.db.backends]: (0.003) SELECT "rapidsms_backend"."name" FROM "rapidsms_backend"; args=()
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_backend" ("name") VALUES (message_tester); args=('message_tester',)
+[django.db.backends]: (0.000) SELECT "rapidsms_app"."module" FROM "rapidsms_app"; args=()
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (djtables, False); args=('djtables', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (mptt, False); args=('mptt', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (uni_form, False); args=('uni_form', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django_extensions, False); args=('django_extensions', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django_digest, False); args=('django_digest', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django_nose, False); args=('django_nose', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (kit, False); args=('kit', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (kit.excel.upload, False); args=('kit.excel.upload', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (kit.excel.export, False); args=('kit.excel.export', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms, False); args=('rapidsms', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms.contrib.handlers, False); args=('rapidsms.contrib.handlers', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms.contrib.locations, False); args=('rapidsms.contrib.locations', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms.contrib.locations.nested, False); args=('rapidsms.contrib.locations.nested', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms.contrib.default, False); args=('rapidsms.contrib.default', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.auth, False); args=('django.contrib.auth', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.admin, False); args=('django.contrib.admin', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.sessions, False); args=('django.contrib.sessions', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.contenttypes, False); args=('django.contrib.contenttypes', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.sites, False); args=('django.contrib.sites', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (django.contrib.humanize, False); args=('django.contrib.humanize', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (eav, False); args=('eav', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms_xforms, False); args=('rapidsms_xforms', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (auth, False); args=('auth', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (contact, False); args=('contact', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (rapidsms_httprouter, False); args=('rapidsms_httprouter', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (poll, False); args=('poll', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (generic, False); args=('generic', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (generic.reporting, False); args=('generic.reporting', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (uganda_common, False); args=('uganda_common', False)
+[django.db.backends]: (0.000) INSERT INTO "rapidsms_app" ("module", "active") VALUES (script, False); args=('script', False)
+[legacyrouter]: Starting RapidSMS...
+[legacyrouter]: Started
+[legacyrouter]: starting backend
+[legacyrouter]: Caught KeyboardInterrupt
+[django.db.backends]: (0.004) SELECT "rapidsms_backend"."name" FROM "rapidsms_backend"; args=()
+[django.db.backends]: (0.000) SELECT "rapidsms_app"."module" FROM "rapidsms_app"; args=()
+[legacyrouter]: Starting RapidSMS...
+[legacyrouter]: Started
+[legacyrouter]: starting backend
+[legacyrouter]: Caught KeyboardInterrupt
