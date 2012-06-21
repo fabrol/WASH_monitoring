@@ -52,3 +52,4 @@
 [legacyrouter]: Starting RapidSMS...
 [legacyrouter]: Started
 [legacyrouter]: starting backend
+[legacyrouter]: Caught KeyboardInterrupt
