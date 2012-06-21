@@ -24,11 +24,11 @@ def view_submissions(request, xform_pk):
         base_template='kit/submissions_base.html', \
         partial_row='kit/partials/reports/submission_row.html', \
         results_title='Last Reporting Period Results', \
-        columns=[('Reporter', True, 'message__connection__contact__name', SimpleSorter(),), \
+        columns=[('Reporter', True, 'message__connection', SimpleSorter(),), \
                  ('Location', True, 'message__connection__contact__reporting_location__name', SimpleSorter(),), \
                  ('Report', True, 'raw', SimpleSorter(),), \
                  ('Date', True, 'created', SimpleSorter(),), \
                  ('Approved', True, 'approved', SimpleSorter(),), \
                  ('', False, '', None,)], \
-        sort_column='message__connection__contact__healthproviderbase__healthprovider__facility__name', \
+        sort_column='created', \
     )

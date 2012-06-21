@@ -41,3 +41,14 @@
 [legacyrouter]: Started
 [legacyrouter]: starting backend
 [legacyrouter]: Caught KeyboardInterrupt
+[django.db.backends]: (0.002) SELECT "rapidsms_backend"."name" FROM "rapidsms_backend"; args=()
+[django.db.backends]: (0.005) SELECT "rapidsms_app"."module" FROM "rapidsms_app"; args=()
+[legacyrouter]: Starting RapidSMS...
+[legacyrouter]: Started
+[legacyrouter]: starting backend
+[legacyrouter]: Caught KeyboardInterrupt
+[django.db.backends]: (0.003) SELECT "rapidsms_backend"."name" FROM "rapidsms_backend"; args=()
+[django.db.backends]: (0.000) SELECT "rapidsms_app"."module" FROM "rapidsms_app"; args=()
+[legacyrouter]: Starting RapidSMS...
+[legacyrouter]: Started
+[legacyrouter]: starting backend
