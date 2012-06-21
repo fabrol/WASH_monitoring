@@ -1,7 +1,7 @@
 from django.db import models
 from rapidsms.models import ContactBase
 class ExtendedContact(models.Model):
-	#reporting_location = models.ForeignKey('locations.Location', blank=True, null=True)
+	#reporting_location = models.ForeignKey('locations.Location', blank=True, null=True, related_name = 'reporter_location')
 	
 	def total_submissions(self):
 		from rapidsms_xforms.models import XFormSubmission
