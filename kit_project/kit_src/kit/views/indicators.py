@@ -24,7 +24,7 @@ def view_submissions(request, xform_pk):
         base_template='kit/submissions_base.html', \
         partial_row='kit/partials/reports/submission_row.html', \
         results_title='Last Reporting Period Results', \
-        columns=[('Reporter', True, 'message__connection', SimpleSorter(),), \
+        columns=[('Reporter', True, 'message__connection__contact__name', SimpleSorter(),), \
                  ('Location', True, 'message__connection__contact__reporting_location__name', SimpleSorter(),), \
                  ('Report', True, 'raw', SimpleSorter(),), \
                  ('Date', True, 'created', SimpleSorter(),), \
