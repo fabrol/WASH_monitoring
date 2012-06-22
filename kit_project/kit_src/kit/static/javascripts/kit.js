@@ -12,6 +12,14 @@ function editReporter(elem, pk) {
     });
 }
 
+function editSubmission(elem, pk){
+	overlay_loading_panel($(elem).parents('tr'));
+	$(elem).parents('tr').load('../reports/submissions/' + pk + '/edit/', '', function(){
+		$('#div_panel_loading').hide();
+	});
+
+}
+
 function deleteLocation(elem, pk, name) {
     if (confirm('Are you sure you want to remove ' + name + '?')) {
         $(elem).parents('tr').remove();
@@ -31,6 +39,13 @@ function deleteReport(elem, pk, name) {
         $(elem).parents('tr').remove();
         $.post('/xforms/' + pk + '/delete/', function(data) {});
     }
+}
+
+function editReport(elem, pk, name) {
+	    overlay_loading_panel($(elem).parents('tr'));
+		    $(elem).parents('tr').load('../xforms/' + pk + '/edit/', '', function() {
+				        $('#div_panel_loading').hide();
+						    });
 }
 
 function submitForm(link, action, resultDiv) {

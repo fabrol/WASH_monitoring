@@ -5,6 +5,16 @@
     <td>
         {{ object.connection.contact.reporting_location.name }} 
     </td>
+	<td>
+		{% if object.connection.contact.groups %}
+			<ul>
+				{% for group in object.connection.contact.groups.all %}
+				<li> {{ group.name }} </li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</td>
+
     <td>{{ object.raw }}
         <ul>
         {% for v in object|get_submission_values %}
@@ -18,7 +28,7 @@
     <td>{{ object.approved }}</td>
     <td>
         <div class="buttons">
-            <a href="/indicators/submissions/{{ object.pk }}/edit/">
+            <a href="/reports/submissions/{{ object.pk }}/edit/">
                 <img src="{{ MEDIA_URL }}rapidsms_xforms/icons/silk/pencil.png" alt=""/> Edit
             </a>
         </div>

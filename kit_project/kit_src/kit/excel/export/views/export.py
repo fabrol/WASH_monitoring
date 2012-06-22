@@ -15,9 +15,10 @@ def export_submissions(request, xform_pk):
         export_data['reporter'] = r.connection.contact.name if r.connection.contact else 'None'
         export_data['reporter_id'] = r.connection.contact.pk if r.connection.contact else 'None'
         export_data['phone'] = r.connection.identity
-        export_data['location'] = r.connection.contact.reporting_location.name
-        export_data['location_id'] = r.connection.contact.reporting_location.pk
-
+        for group in r.connection.contact.groups.all():
+			export_data['group'] = group.name 
+        export_data['location'] = r.connection.contact.reporting_location.name if r.connection.contact.reporting_location else 'None'
+        export_data['location_id'] = r.connection.contact.reporting_location.pk if r.connection.contact.reporting_location else 'None'
         export_data['valid'] = (r.has_errors and "No") or "Yes"
         for f in xform.fields.order_by('order'):
             export_data["%s:%s" % (f.command, f.description)] = getattr(r.eav, f.slug) or 'None'

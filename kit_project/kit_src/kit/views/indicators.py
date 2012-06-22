@@ -14,18 +14,20 @@ def edit_report(req, submission_id):
     else:
         return toret
 
+#only allows the user to edit submissions that belong to his own group(NGO)
 def view_submissions(request, xform_pk):
     xform = get_object_or_404(XForm, pk=xform_pk)
     return generic(\
         request, \
         model=XFormSubmission, \
-        queryset=xform.submissions.all().order_by('-created'), \
+        queryset=xform.submissions.filter(message__connection__contact__groups__in=request.user.groups.all()).order_by('-created'), \
         objects_per_page=25, \
         base_template='kit/submissions_base.html', \
         partial_row='kit/partials/reports/submission_row.html', \
         results_title='Last Reporting Period Results', \
         columns=[('Reporter', True, 'message__connection__contact__name', SimpleSorter(),), \
                  ('Location', True, 'message__connection__contact__reporting_location__name', SimpleSorter(),), \
+				 ('Group', True, 'message__connection__contact__groups', SimpleSorter(),),\
                  ('Report', True, 'raw', SimpleSorter(),), \
                  ('Date', True, 'created', SimpleSorter(),), \
                  ('Approved', True, 'approved', SimpleSorter(),), \

@@ -1,0 +1,18 @@
+Changing the approval of a submission easily from the view
+
+Add functionality to allow deletion of a submission
+//On second thoughts, a user should never be allowed to delete a submission, only the admins should be able to do that
+
+//DONE : Fix the export to excel function
+
+Remove the poll application
+
+//DONE have a system where there are certain users/contacts (managers) who when they login
+can (or cannot) access admin, but when they click on the report tab, then only the report submissions
+belonging to their group are shown, and they can approve/delete them.
+
+ADD A CUSTOM XFORMS_AUTHENTICATION_CHECKER TO ENABLE DIFFERENT USERS BASED ON GROUP ???? (ITS IN LINE 608 of xforms models)
+
+//MAYBE"S
+add a script that auto updates the excel files after a certain time.
+
