@@ -1,3 +1,24 @@
+--------------------------------------
+--------------------------------------
+RapidSMS Madagascar - WASH monitoring
+--------------------------------------
+--------------------------------------
+
+
+reports -> the survey with indicators
+
+groups -> NGO's
+
+the managers for each NGO are given online id's, wherein they
+can access and edit the submissions belonging to their
+NGO (group) only
+
+The managers need to approve the messages as they come in
+
+The central admin can generate a report once they see that all
+the messages are approved.
+
+
 Installation
 ============
 
