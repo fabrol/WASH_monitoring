@@ -4,7 +4,7 @@ only allow certain views to be seen by users who aren't staff
 
 only show reporters belonging to the logged in users group
 
-switch the database to postgres
+//DONE switch the database to postgres
 
 
 Add functionality to allow deletion of a submission
