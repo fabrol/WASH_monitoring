@@ -20,6 +20,7 @@ function editSubmission(elem, pk){
 
 }
 
+
 function deleteLocation(elem, pk, name) {
     if (confirm('Are you sure you want to remove ' + name + '?')) {
         $(elem).parents('tr').remove();
