@@ -1,0 +1,15 @@
+The RapidSMS system for monitoring of WASH/CLTS is based on the health agents
+that go out into the field, and collect data about the progress of CLTS in their
+assigned locations. 
+
+The system will have the each reporter identified by his phone number in the system,
+and associated with a group (NGO). Once the reporter goes out to the field, he will 
+text in the data associated with that location which will then be recorded. These 
+submissions will need to be approved by the local NGO manager through a web interface
+before they are used in the report.
+
+The local NGO is responsible for maintaining a log of their health reporters, their phone
+numbers, and the locations that they will be reporting from. This should not be difficult
+as the names and locations are already on file, only the sms numbers need to be added.
+
+
