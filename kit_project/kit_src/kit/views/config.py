@@ -12,8 +12,11 @@ from django.template import RequestContext
 from rapidsms.contrib.locations.models import Location
 from rapidsms.models import Contact, Backend, Connection
 from rapidsms_xforms.models import XForm
+from django.contrib.auth.decorators import permission_required
+
 
 @login_required
+@permission_required('req.user.is_staff')
 def edit_config(req):
     form = None
 

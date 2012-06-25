@@ -6,8 +6,9 @@ from django.template import RequestContext
 from rapidsms.contrib.locations.models import Location
 from rapidsms.models import Contact
 from rapidsms_xforms.models import XFormField, XForm
+from django.contrib.auth.decorators import permission_required
 
-
+@permission_required('req.user.is_staff')
 def dashboard(req):
 
     return render_to_response('kit/dashboard.html',
