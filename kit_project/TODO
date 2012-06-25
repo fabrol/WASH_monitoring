@@ -1,5 +1,9 @@
 Changing the approval of a submission easily from the view
 
+only allow certain views to be seen by users who aren't staff
+
+only show reporters belonging to the logged in users group
+
 switch the database to postgres
 
 
