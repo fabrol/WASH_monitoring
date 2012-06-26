@@ -27,12 +27,17 @@ TIME_ZONE = "Africa/Kampala"
 # you should configure your database here before doing any real work.
 # see: http://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-
-   'default': {
-        'ENGINE' : 'django.db.backends.sqlite3',
-        'NAME'   : 'kit_sql',
-       }
+    'default': {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kit',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+    }
 }
+        #'ENGINE' : 'django.db.backends.sqlite3',
+       # 'NAME'   : 'kit_sql',
+      # }
+#}
 # the rapidsms backend configuration is designed to resemble django's
 # database configuration, as a nested dict of (name, configuration).
 #
