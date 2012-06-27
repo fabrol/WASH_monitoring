@@ -15,7 +15,7 @@
 	url = git://github.com/daveycrockett/rapidsms-polls
 [submodule "kit_project/rapidsms_xforms_src"]
 	path = kit_project/rapidsms_xforms_src
-	url = git://github.com/daveycrockett/rapidsms-xforms
+    url = gitL//github.com/fabrol/rapidsms_xforms_src
 [submodule "kit_project/rapidsms_auth"]
 	path = kit_project/rapidsms_auth
 	url = git://github.com/unicefuganda/rapidsms-auth
