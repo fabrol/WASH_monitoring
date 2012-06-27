@@ -6,6 +6,10 @@ only show reporters belonging to the logged in users group
 
 Remove the poll application
 
+The fix to rapidsms_xforms_src/rapidsms_xforms/models.py is not going to the repo.
+
+django-mptt doesnt come installed
+
 //DONE switch the database to postgres
 
 

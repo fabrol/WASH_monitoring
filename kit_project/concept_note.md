@@ -19,7 +19,7 @@ numbers, and the locations that they will be reporting from. This should not be 
 as the names and locations are already on file, only the sms numbers need to be added.
 
 Problem
--------
+---------
 Now, we need a way to identify the village that the worker is reporting from, because each
 worker can report from a number of villages. For this the best way would be some sort
 of a unique code for each village in the district. The worker texts in the village code and
@@ -41,7 +41,7 @@ parsed from the message.
         the system to read the location from the text.
 
 
-OR
+> OR
 
         Just pass the locations for now, and let the submission be associated with the location
         of the reporter, which will not be the village, but the NGO area or some level above

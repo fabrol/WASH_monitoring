@@ -18,6 +18,20 @@ The managers need to approve the messages as they come in
 The central admin can generate a report once they see that all
 the messages are approved.
 
+The messages have the following format
+
+Ex.   CLTS    101               600             AMBD            SAH        4 5 10 9 5 2 1
+     KEYWORD REGION-NUM-CODE COMMUNE-NUM-CODE FOKONTANY-CODE VILLAGE-CODE INDICATOR VALUES 
+     
+The health-workers know the region and commune codes already, and now we need a way to codify the fokontany and villages.
+One option would be to create numeric codes for all of these, but that would take time, be very hard to
+train the health workers in, and also be prone to frequent errors that the NGO Manager would then need to fix. This
+could in turn act as a deterrent for the manager, causing him to not want to go in and approve the messages. Hence, 
+I recommend the use of symbolic codes for the villages and fokontany that are created from the names of the original
+locations, and can be easily distributed with the training card, and are easier than numeric codes to teach the 
+health workers. 
+The batch of codes for Saint-Marie has been created.
+
 
 Installation
 ============
