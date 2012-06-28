@@ -28,6 +28,13 @@
     <td>{{ object.approved }}</td>
     <td>
         <div class="buttons">
+            <a href="/reports/submissions/{{ object.pk }}/tgapprove/">
+                Approve
+            </a>
+        </td>
+        </div>
+    <td>
+        <div class="buttons">
             <a href="/reports/submissions/{{ object.pk }}/edit/">
                 <img src="{{ MEDIA_URL }}rapidsms_xforms/icons/silk/pencil.png" alt=""/> Edit
             </a>

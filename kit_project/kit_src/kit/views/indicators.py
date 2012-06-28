@@ -9,8 +9,9 @@ def edit_report(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     toret = edit_submission(req, submission_id)
 
-    if type(toret) == HttpResponseRedirect:
-        return redirect('/reports/%d/submissions/' % submission.xform.pk)
+#need to return to the view of the report not the xform view of submissions
+    if isinstance(toret, HttpResponseRedirect):# type(toret) == HttpResponseRedirect:
+        return redirect('/reports/%d/view/' % submission.xform.pk)
     else:
         return toret
 
@@ -39,10 +40,4 @@ def toggle_approval(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     submission.approved = not submission.approved
     submission.save()
-   # xform = submission.xform
-   # form_class = make_submission_form(xform)
-   # form = form_class(req.POST, req.FILES)
-        # no errors?  save and redirect
-   # if form.is_valid():
-        # update our submission
-   #     xform.update_submission_from_dict(submission, form.cleaned_data)
+    return redirect('/reports/%d/view/' % submission.xform.pk)

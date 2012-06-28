@@ -7,7 +7,7 @@ from generic.sorters import SimpleSorter
 from kit.excel.upload.views import bulk_upload
 from contact.forms import AssignGroupForm, MassTextForm
 from contact.urls import urlpatterns as contact_urls
-from kit.views import edit_config, reset, dashboard, edit_reporter, delete_reporter, edit_location, delete_location, edit_report, view_submissions
+from kit.views import edit_config, reset, dashboard, edit_reporter, delete_reporter, edit_location, delete_location, edit_report, view_submissions, toggle_approval
 from kit.excel.export.views import export_submissions, export_responses
 from kit.models import Report, Indicator
 from kit.util import get_xform_list, get_xformfield_list
@@ -99,6 +99,7 @@ urlpatterns = patterns('',
     }, name="kit-reports"),
     url("^reports/(?P<xform_pk>\d+)/export/$", export_submissions),
     url("^reports/submissions/(?P<submission_id>\d+)/edit/", edit_report),
+    url("^reports/submissions/(?P<submission_id>\d+)/tgapprove/", toggle_approval),
     url("^reports/(?P<xform_pk>\d+)/view/$", view_submissions),
 
     url("^responses/(?P<poll_pk>\d+)/export/$", export_responses),
