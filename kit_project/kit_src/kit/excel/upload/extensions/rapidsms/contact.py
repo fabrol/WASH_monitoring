@@ -18,7 +18,7 @@ class ExcelContact(models.Model):
     def process_phone_number_xls(cls, value, instance):
         from rapidsms.models import Connection, Backend
 
-        country_code = getattr(settings, 'COUNTRY_CALLING_CODE', '256')
+        country_code = getattr(settings, 'COUNTRY_CALLING_CODE', '261')
         backends = getattr(settings, 'BACKEND_PREFIXES', [('', 'yo6700')])
         number = value
         if number.startswith('0'):
