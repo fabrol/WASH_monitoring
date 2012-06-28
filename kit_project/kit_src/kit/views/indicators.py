@@ -4,14 +4,19 @@ from generic.sorters import SimpleSorter
 from generic.views import generic
 from rapidsms_xforms.models import XFormSubmission, XForm
 from rapidsms_xforms.views import edit_submission,make_submission_form
+import re
 
 def edit_report(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     toret = edit_submission(req, submission_id)
 
-#need to return to the view of the report not the xform view of submissions
-    if isinstance(toret, HttpResponseRedirect):# type(toret) == HttpResponseRedirect:
+    re1 = '(xforms\\/\\d\\/submissions\\/)'
+    rg = re.compile(re1)
+    if rg.match(toret.content):
         return redirect('/reports/%d/view/' % submission.xform.pk)
+#need to return to the view of the report not the xform view of submissions
+   # if isinstance(toret, HttpResponseRedirect):# type(toret) == HttpResponseRedirect:
+   #     return redirect('/reports/%d/view/' % submission.xform.pk)
     else:
         return toret
 

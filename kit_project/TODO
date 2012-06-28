@@ -1,5 +1,11 @@
 //DONE Changing the approval of a submission easily from the view
 
+The app doesnt recognize the correct group of the sending agent, which leads to the wrong response being
+sent - It seems that the message connection has the correct group defined in it because it shows up in
+the view submission. But the response sent by the console is for the group restriction. 
+    Can do a temporary hack to keep the message for restriction the same as the message for correct 
+    group, but this needs to be fixed.
+
 only allow certain views to be seen by users who aren't staff
 
 only show reporters belonging to the logged in users group
