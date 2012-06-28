@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, redirect
 from generic.sorters import SimpleSorter
 from generic.views import generic
 from rapidsms_xforms.models import XFormSubmission, XForm
-from rapidsms_xforms.views import edit_submission
+from rapidsms_xforms.views import edit_submission,make_submission_form
 
 def edit_report(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
@@ -32,5 +32,17 @@ def view_submissions(request, xform_pk):
                  ('Date', True, 'created', SimpleSorter(),), \
                  ('Approved', True, 'approved', SimpleSorter(),), \
                  ('', False, '', None,)], \
-        sort_column='created', \
+        sort_column='-created', \
     )
+
+def toggle_approval(req, submission_id):
+    submission = get_object_or_404(XFormSubmission, pk=submission_id)
+    submission.approved = not submission.approved
+    submission.save()
+   # xform = submission.xform
+   # form_class = make_submission_form(xform)
+   # form = form_class(req.POST, req.FILES)
+        # no errors?  save and redirect
+   # if form.is_valid():
+        # update our submission
+   #     xform.update_submission_from_dict(submission, form.cleaned_data)

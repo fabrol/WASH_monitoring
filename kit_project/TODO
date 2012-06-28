@@ -10,6 +10,10 @@ The fix to rapidsms_xforms_src/rapidsms_xforms/models.py is not going to the rep
 
 django-mptt doesnt come installed
 
+return from edit submission to view submission normal, not xform view
+
+look into logs for changes in values
+
 //DONE switch the database to postgres
 
 
