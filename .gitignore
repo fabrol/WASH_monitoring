@@ -1,9 +1,7 @@
 .pydevproject
 .project
 *.pyc
-*~
 *.swp
 .settings
 localsettings.py
 *.sql
-kit_sql
