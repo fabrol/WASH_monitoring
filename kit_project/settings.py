@@ -112,11 +112,6 @@ RAPIDSMS_TABS = [
      ("httprouter-console", "Console"),
 ]
 
-
-SOUTH_MIGRATION_MODULES = {
-            'eav': 'ignore',
-}
-
 # -------------------------------------------------------------------- #
 #                         BORING CONFIGURATION                         #
 # -------------------------------------------------------------------- #
