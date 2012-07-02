@@ -1,5 +1,9 @@
 //DONE Changing the approval of a submission easily from the view
 
+//DONE - Export wont fail, but submission won't show in list -If the contact is not registered with the correct backend, and is not recog
+nized when the sms is sent, it will cause the export to fail, and deleting submissions does not work !
+
+
 The app doesnt recognize the correct group of the sending agent, which leads to the wrong response being
 sent - It seems that the message connection has the correct group defined in it because it shows up in
 the view submission. But the response sent by the console is for the group restriction. 
