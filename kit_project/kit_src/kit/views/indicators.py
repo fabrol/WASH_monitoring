@@ -41,13 +41,14 @@ def view_submissions(request, xform_pk):
 def toggle_approval(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     
-    if(submission.approved):
+    if(submission.approved is True):
         submission.approved = 'False'
-        appr_submission = ApprovedSubmission.objects.get(submission_id = submission_id)
+        appr_submission = ApprovedSubmission.objects.get(submission_id = submission)
         appr_submission.delete()
     else:
-        submission.approved = 'True'
-        ApprovedSubmission.objects.create(submission_id = submission, time_approved= datetime.now())
+        submission.approved = True
+        appr_sub = ApprovedSubmission.objects.create(submission_id = submission, time_approved= datetime.now())
+        appr_sub.save()
 
     submission.save()
     return redirect('/reports/%d/view/' % submission.xform.pk)
