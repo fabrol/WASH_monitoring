@@ -25,3 +25,6 @@
 [submodule "kit_project/rapidsms_script"]
 	path = kit_project/rapidsms_script
 	url = git://github.com/unicefuganda/rapidsms-script
+[submodule "kit_project/rapidsms_xforms_src"]
+	path = kit_project/rapidsms_xforms_src
+	url = git://github.com/fabrol/rapidsms-xforms

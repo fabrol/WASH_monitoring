@@ -2,6 +2,5 @@
 .project
 *.pyc
 *.swp
-.settings
 localsettings.py
 *.sql
