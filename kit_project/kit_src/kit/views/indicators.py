@@ -4,19 +4,15 @@ from generic.sorters import SimpleSorter
 from generic.views import generic
 from rapidsms_xforms.models import XFormSubmission, XForm
 from rapidsms_xforms.views import edit_submission,make_submission_form
-import re
+from datetime import datetime
 
 def edit_report(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     toret = edit_submission(req, submission_id)
 
-    re1 = '(xforms\\/\\d\\/submissions\\/)'
-    rg = re.compile(re1)
-    if rg.match(toret.content):
-        return redirect('/reports/%d/view/' % submission.xform.pk)
 #need to return to the view of the report not the xform view of submissions
-   # if isinstance(toret, HttpResponseRedirect):# type(toret) == HttpResponseRedirect:
-   #     return redirect('/reports/%d/view/' % submission.xform.pk)
+    if type(toret) == HttpResponseRedirect:
+         return redirect('/reports/%d/view/' % submission.xform.pk)
     else:
         return toret
 
@@ -43,6 +39,14 @@ def view_submissions(request, xform_pk):
 
 def toggle_approval(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
-    submission.approved = not submission.approved
+    
+    if(submission.approved):
+        submission.approved = 'False'
+        appr_submission = ApprovedSubmission.objects.get(submission_id = submission_id)
+        appr_submission.delete()
+    else:
+        submission.approved = 'True'
+        ApprovedSubmission.objects.create(submission_id = submission_id, approved_date = datetime.datetime.now())
+
     submission.save()
     return redirect('/reports/%d/view/' % submission.xform.pk)

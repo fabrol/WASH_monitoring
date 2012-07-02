@@ -4,7 +4,14 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.db import models
 from django.db.models.signals import post_save
-from rapidsms_xforms.models import XForm, XFormField, XFormFieldConstraint
+from rapidsms_xforms.models import XForm, XFormField, XFormFieldConstraint, XFormSubmission
+
+class ApprovedSubmission(models.Model):
+    submission_id = models.ForeignKey('rapidsms_xforms.XFormSubmission')
+    time_approved = models.DateTimeField()
+
+    def __unicode__(self):
+        return self.submission_id
 
 class Config(models.Model):
     slug = models.SlugField(max_length=50, db_index=True,

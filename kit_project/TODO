@@ -1,8 +1,11 @@
-//DONE Changing the approval of a submission easily from the view
 
-//DONE - Export wont fail, but submission won't show in list -If the contact is not registered with the correct backend, and is not recog
-nized when the sms is sent, it will cause the export to fail, and deleting submissions does not work !
+return from edit submission to view submission normal, not xform view
 
+
+Approved Reports model : Create a database whenever a report is approved.
+Allow the download of either one by the staff user.
+
+Should the approval toggle be just one way? 
 
 The app doesnt recognize the correct group of the sending agent, which leads to the wrong response being
 sent - It seems that the message connection has the correct group defined in it because it shows up in
@@ -20,7 +23,6 @@ The fix to rapidsms_xforms_src/rapidsms_xforms/models.py is not going to the rep
 
 //DONE django-mptt doesnt come installed
 
-return from edit submission to view submission normal, not xform view
 
 look into logs for changes in values
 
@@ -29,6 +31,11 @@ Figuring out phone number parsing.
 Fix the delete functionality for submissions in the admin
 
 fix or remove the fields in the dropdown below a submission in view submissions
+
+//DONE Changing the approval of a submission easily from the view
+
+//DONE - Export wont fail, but submission won't show in list -If the contact is not registered with the correct backend, and is not recog
+nized when the sms is sent, it will cause the export to fail, and deleting submissions does not work !
 
 //DONE switch the database to postgres
 

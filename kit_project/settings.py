@@ -95,7 +95,7 @@ INSTALLED_APPS = [
     "generic.reporting",
     "uganda_common",
     "script",
-   # "south",
+    "south",
 ]
 
 
@@ -111,6 +111,11 @@ RAPIDSMS_TABS = [
     ('kit.views.edit_config', "Configuration"),
      ("httprouter-console", "Console"),
 ]
+
+
+SOUTH_MIGRATION_MODULES = {
+            'eav': 'ignore',
+}
 
 # -------------------------------------------------------------------- #
 #                         BORING CONFIGURATION                         #
