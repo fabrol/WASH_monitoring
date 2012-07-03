@@ -18,7 +18,8 @@
     </td>
     <td class="button_col">
         <div class="buttons">
-            <a href="{% url kit.excel.export.views.export_submissions object.pk %}">Download submissions ({{ object.submissions.count }})</a> | 
+            <a href="{% url kit.excel.export.views.export_submissions object.pk %}">Download all submissions ({{ object.submissions.count }})</a> | 
+            <a href="{% url kit.excel.export.views.export_approved_submissions object.pk %}">Download approved submissions </a> | 
             <a href="{% url kit.views.view_submissions object.pk %}">View/Edit submissions</a>
             <a href="javascript:void(0)" onclick="deleteReport(this, {{ object.pk }},'{{ object.name }}')">
                 <img src="{{ MEDIA_URL }}rapidsms/icons/silk/delete.png" />

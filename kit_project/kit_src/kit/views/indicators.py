@@ -42,7 +42,7 @@ def toggle_approval(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     
     if(submission.approved is True):
-        submission.approved = 'False'
+        submission.approved = False
         appr_submission = ApprovedSubmission.objects.get(submission_id = submission)
         appr_submission.delete()
     else:
