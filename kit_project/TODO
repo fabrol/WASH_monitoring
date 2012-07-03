@@ -1,17 +1,17 @@
 
-return from edit submission to view submission normal, not xform view
+//DONE return from edit submission to view submission normal, not xform view
 
 
-Approved Reports model : Create a database whenever a report is approved.
+//DONE Approved Reports model : Create a database whenever a report is approved
+
 Allow the download of either one by the staff user.
 
 Should the approval toggle be just one way? 
 
-The app doesnt recognize the correct group of the sending agent, which leads to the wrong response being
+Sometimes does. The app doesnt recognize the correct group of the sending agent, which leads to the wrong response being
 sent - It seems that the message connection has the correct group defined in it because it shows up in
 the view submission. But the response sent by the console is for the group restriction. 
-    Can do a temporary hack to keep the message for restriction the same as the message for correct 
-    group, but this needs to be fixed.
+    Can do a temporary hack to keep the message for restriction the same as the message for correct group, but this needs to be fixed.
 
 only allow certain views to be seen by users who aren't staff
 

@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 from generic.sorters import SimpleSorter
 from generic.views import generic
@@ -10,7 +10,7 @@ from kit.models import ApprovedSubmission
 def edit_report(req, submission_id):
     submission = get_object_or_404(XFormSubmission, pk=submission_id)
     toret = edit_submission(req, submission_id)
-
+    print type(toret)
 #need to return to the view of the report not the xform view of submissions
     if type(toret) == HttpResponseRedirect:
          return redirect('/reports/%d/view/' % submission.xform.pk)
@@ -52,3 +52,6 @@ def toggle_approval(req, submission_id):
 
     submission.save()
     return redirect('/reports/%d/view/' % submission.xform.pk)
+
+def redirect_to_submissions(req, xform_pk):
+    return redirect('/reports/%s/view/' % str(xform_pk))
