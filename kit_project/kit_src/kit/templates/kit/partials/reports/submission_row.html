@@ -19,7 +19,7 @@
         <ul>
         {% for v in object|get_submission_values %}
             <li>
-                {{ v.attribute.description }}: {{ v.value_int }}
+                {{ v.attribute.description }}: {{ v.value }}
             </li>
         {% endfor %}
         </ul>    
